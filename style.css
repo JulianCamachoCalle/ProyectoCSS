@@ -4,6 +4,29 @@
     background-color: white;
 }
 
+hgroup {
+    background-color: black;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+h1 {
+    background-color: black;
+    color: white;
+    font-size: 48px; /* Tamaño de la letra */
+    font-family: 'Arial', sans-serif; /* Fuente de la letra */
+    font-weight: bold; /* Hace que la letra sea más gruesa */
+    letter-spacing: 2px; /* Espacio entre las letras */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra del texto */
+    margin: 0;
+    padding: 0;
+}
+
 .nav-menu {
     display: flex;
     justify-content: center;
@@ -34,3 +57,4 @@
     background-color: black;
     color: white;
 }
+
