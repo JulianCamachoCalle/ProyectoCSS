@@ -4,18 +4,23 @@
     background-color: white;
 }
 
-nav {
+.nav-menu {
     display: flex;
     justify-content: center;
 }
 
-nav ul, li {
+.nav-menu ul, li {
     display: flex;
 }
 
-nav a {
+.nav-menu img {
+    width: 65px;
+    margin: 0px 15px;
+}
+
+.nav-menu a {
     display: flex;
-    margin: 15px 20px;
+    margin: 15px;
     border: 2px solid black;
     padding: 5px 10px;
     border-radius: 15px;
@@ -25,7 +30,7 @@ nav a {
     font-family: monospace;
 }
 
-nav a:hover, a:focus {
+.nav-menu a:hover {
     background-color: black;
     color: white;
 }
