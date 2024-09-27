@@ -52,6 +52,7 @@ nav {
     padding: 0;
 
     li {
+      margin: 10px 0;
 
       a {
         color: @text-color;
@@ -71,11 +72,12 @@ nav {
 
   /* Búsqueda */
   .search-form {
-    position: relative;
-    display: inline-block;
+    display: inherit;
+    margin: 20px 0;
 
     input {
-      padding: 15px 30px;
+      width: 100%;
+      padding: 12px 30px;
       border: 1px solid @border-busqueda;
       background-color: @transparent;
       color: @text-color;
@@ -83,10 +85,6 @@ nav {
     }
 
     button {
-      position: absolute;
-      right: 15px;
-      top: 50%;
-      transform: translateY(-50%);
       background: none;
       border: none;
       cursor: pointer;
@@ -98,6 +96,83 @@ nav {
     }
   }
 
+  .menu-hamburguesa {
+    display: none;
+    font-size: 30px;
+    color: @text-color;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .logo {
+      margin-bottom: 10px;
+    }
+
+    ul {
+      flex-direction: column;
+      width: 100%;
+      display: none;
+    }
+
+    ul.activo {
+      display: flex;
+    }
+
+    li {
+      width: 100%;
+      text-align: left;
+      margin-bottom: 10px;
+
+      a {
+        padding: 10px;
+        display: block;
+      }
+    }
+
+    .search-form {
+      width: 100%;
+      max-width: none;
+
+      input {
+        padding: 10px 20px;;
+      }
+
+      button {
+        right: 8px;
+      }
+    }
+
+    .menu-hamburguesa {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  p {
+    font-size: 12px;
+  }
+
+  ul li a {
+    font-size: 15px;
+  }
+
+  .search-form input {
+    padding: 10px 20px;
+  }
+
+  .search-form button i {
+    font-size: 14px;
+  }
 }
 
 /* Variables Bienvenida y Section*/
@@ -197,92 +272,91 @@ nav {
 
 
 .box-footer-general {
-    width: 100vw;
-    height: auto;
-    box-sizing: border-box;
-    background-color: @footer-bg-color;
-    color: @footer-text-color;
-    font-size: @footer-font-size;
-    justify-content: space-around;
-    margin-top: auto;
-    padding: @footer-padding;
+  height: auto;
+  box-sizing: border-box;
+  background-color: @footer-bg-color;
+  color: @footer-text-color;
+  font-size: @footer-font-size;
+  justify-content: space-around;
+  margin-top: auto;
+  padding: @footer-padding;
 }
 
 .box-footer {
-    width: 70%;
-    height: auto;
-    margin: auto;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
+  width: 70%;
+  height: auto;
+  margin: auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 
 .box-footer-2 {
-    width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-top: 1px solid @footer-gray-color;
-    border-bottom: 1px solid @footer-gray-color;
-    padding-top: 2em;
-    padding-bottom: 2em;
-    line-height: @footer-line-height;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-top: 1px solid @footer-gray-color;
+  border-bottom: 1px solid @footer-gray-color;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  line-height: @footer-line-height;
 }
 
 /* Sección "Acerca de" y "Ayuda" */
 .footer-acerca-ayuda {
-    height: auto;
-    box-sizing: border-box;
-    display: flex;
+  height: auto;
+  box-sizing: border-box;
+  display: flex;
 }
 
 .footer-acerca,
 .horario-atencion {
-    margin-bottom: 2em;
-    width: 50%;
+  margin-bottom: 2em;
+  width: 50%;
 }
 
 .footer-ayuda {
-    margin-bottom: 2em;
+  margin-bottom: 2em;
 }
 
 /* Redes sociales */
 .footer-redes {
-    height: auto;
-    box-sizing: border-box;
-    display: flex;
+  height: auto;
+  box-sizing: border-box;
+  display: flex;
 }
 
 .social-networks a {
-    font-size: 1.5rem; 
-    color: @footer-gray-color;
-    transition: @footer-transition-time;
+  font-size: 1.5rem;
+  color: @footer-gray-color;
+  transition: @footer-transition-time;
 }
 
 .social-networks a:hover {
-    color: @footer-text-color;
+  color: @footer-text-color;
 }
 
 .social-networks a:not(:last-of-type) {
-    margin-right: 1.5rem;
+  margin-right: 1.5rem;
 }
 
 /* Estilo para los enlaces */
 .anchor-footer {
-    color: @footer-gray-color;
-    transition: @footer-transition-time;
+  color: @footer-gray-color;
+  transition: @footer-transition-time;
 }
 
 .anchor-footer:hover:not(.horario) {
-    color: @footer-text-color;
+  color: @footer-text-color;
 }
 
 /* Media queries */
 @media screen and (max-width: 680px) {
-    .footer-acerca-ayuda,
-    .footer-redes {
-        flex-direction: column;
-    }
-}
 
+  .footer-acerca-ayuda,
+  .footer-redes {
+    flex-direction: column;
+  }
+}
