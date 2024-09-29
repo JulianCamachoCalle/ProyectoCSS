@@ -1,0 +1,94 @@
+@deporte-font: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+@deporte-primary-color: #000;
+@deporte-accent-color: #d70024;
+
+.container-deporte-shop {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+
+  // Estilo para pantallas más pequeñas
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr; // Columna única en pantallas pequeñas
+  }
+}
+
+.deporte-item-shop {
+  border-radius: 10px;
+
+  &:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+  }
+
+  .figura-deporte-shop {
+    overflow: hidden;
+  }
+
+  .imagen-deporte-shop {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    transition: all 0.5s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+
+.info-producto-shop {
+  padding: 15px 30px;
+  line-height: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .titulo-deporte-shop,
+  .marca-deporte-shop,
+  .color-deporte-shop {
+    font-weight: bold;
+    color: @deporte-primary-color;
+    font-family: @deporte-font;
+  }
+
+  .titulo-deporte-shop {
+    font-size: 25px;
+  }
+
+  .marca-deporte-shop {
+    font-size: 18px;
+  }
+
+  .color-deporte-shop {
+    font-size: 16px;
+  }
+}
+
+.precio-deporte-shop {
+  font-weight: bold;
+  font-size: 0.88em;
+  font-family: @deporte-font;
+  color: @deporte-accent-color;
+}
+
+.boton-compra-deporte {
+  border: none;
+  background-color: @deporte-primary-color;
+  color: #fff;
+  padding: 15px 10px;
+  cursor: pointer;
+}
+
+.carrito-vacio-deporte {
+  padding: 20px;
+  text-align: center;
+}
+
+.hidden-deporte {
+  display: none;
+}
