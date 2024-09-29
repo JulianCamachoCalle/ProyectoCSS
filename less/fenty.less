@@ -22,11 +22,33 @@
 .fenty-principal {
     position: relative;
 
+    img#slider-image {
+        width: 100%;
+        height: 600px; /* Altura fija para todas las imágenes */
+        object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+        border-radius: 10px 10px 0 0;
+    }
+
     img {
         width: 100%;
         height: auto;
     }
+    span#span-ninos {
+        right: 5%;
+        color: @text-color;
+        text-align: right; /* Alineación del texto a la derecha */
 
+    h2 {
+        text-transform: uppercase; /* Convertir a mayúsculas */
+
+    }
+
+    h4 {
+        font-size: @text-size-logo-small;
+        margin: 0;
+        letter-spacing: 0.5px; /* Espaciado entre letras */
+    }
+    }
     span {
         position: absolute;
         top: 40%;

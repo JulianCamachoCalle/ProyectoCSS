@@ -1,0 +1,94 @@
+@ninos-font: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+@ninos-primary-color: #000;
+@ninos-accent-color: #d70024;
+
+.container-ninos-shop {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+
+  // Estilo para pantallas más pequeñas
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr; // Columna única en pantallas pequeñas
+  }
+}
+
+.ninos-item-shop {
+  border-radius: 10px;
+
+  &:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+  }
+
+  .figura-ninos-shop {
+    overflow: hidden;
+  }
+
+  .imagen-ninos-shop {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    transition: all 0.5s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+
+.info-producto-shop {
+  padding: 15px 30px;
+  line-height: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .titulo-ninos-shop,
+  .marca-ninos-shop,
+  .color-ninos-shop {
+    font-weight: bold;
+    color: @ninos-primary-color;
+    font-family: @ninos-font;
+  }
+
+  .titulo-ninos-shop {
+    font-size: 25px;
+  }
+
+  .marca-ninos-shop {
+    font-size: 18px;
+  }
+
+  .color-ninos-shop {
+    font-size: 16px;
+  }
+}
+
+.precio-ninos-shop {
+  font-weight: bold;
+  font-size: 0.88em;
+  font-family: @ninos-font;
+  color: @ninos-accent-color;
+}
+
+.boton-compra-ninos {
+  border: none;
+  background-color: @ninos-primary-color;
+  color: #fff;
+  padding: 15px 10px;
+  cursor: pointer;
+}
+
+.carrito-vacio-ninos {
+  padding: 20px;
+  text-align: center;
+}
+
+.hidden-ninos {
+  display: none;
+}
