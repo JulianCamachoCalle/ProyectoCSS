@@ -35,13 +35,13 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 4px 20px;
+    padding: 4px 0;
 
     .logo {
         img {
             height: 49px;
             width: 59px;
-            padding: 3px;
+            padding: 10px 10px;
         }
     }
 
@@ -50,6 +50,8 @@ nav {
         display: flex;
         margin: 0;
         padding: 0;
+        flex-grow: 1;
+        justify-content: center;
 
         li {
             margin: 10px 0;
@@ -78,7 +80,7 @@ nav {
 
         input {
             width: 100%;
-            padding: 12px 30px;
+            padding: 12px 10px;
             border: 1px solid @border-busqueda;
             background-color: @transparent;
             color: @text-color;
@@ -106,6 +108,12 @@ nav {
         cursor: pointer;
     }
 
+    .login {
+        display: flex;
+        align-items: center;
+        color: @text-color;
+        padding: 10px;
+    }
 }
 
 /* Responsive adjustments */
