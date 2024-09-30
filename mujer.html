@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FENTY x PUMA</title>
+    <title>FENTY x PUMA Mujeres</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet/less" type="text/css" href="less/fenty.less" />
-    <link rel="stylesheet/less" type="text/css" href="less/mujer.less" />
+    <link rel="stylesheet" href="css/fenty.css">
+    <link rel="stylesheet" href="css/mujer.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 </head>
 
@@ -24,7 +24,7 @@
                 <li><a href="hombre.html">Hombre</a></li>
                 <li><a href="ninos.html">Niños</a></li>
                 <li><a href="deportes.html">Deportes</a></li>
-                <li><a href="#">Colecciones</a></li>
+                <li><a href="colecciones.html">Colecciones</a></li>
                 <li><a href="fenty.html">FENTY x PUMA</a></li>
             </ul>
             <form class="search-form">
@@ -39,67 +39,106 @@
         </nav>
     </header>
 
-    <!-- Sección de bienvenida -->
-    <section id="home" class="welcome-section">
-        <img src="img/mujer/fondo.avif" alt="Fondo" class="img-fluid">
-        <h2>Bienvenida a la sección de Mujeres de Puma</h2>
-        <p>Encuentra la mejor ropa y equipamiento deportivo para mujeres. Calidad, innovación y estilo te esperan.</p>
-        <a href="#productos" class="btn btn-primary">Ver Productos</a>
+    <section class="fenty-principal">
+        <img src="img/mujer/fondo.avif" alt="FentyxPuma Mujeres" id="slider-image">
+        <span id="span-mujeres">
+            <h2>
+                <strong>Mujeres</strong>
+            </h2>
+            <h4>Estilo y rendimiento, todo en uno</h4>
+        </span>
+    </section>
+    <section class="fenty-products">
+        <span>
+            <h1>
+                <strong>MODELOS</strong>
+            </h1>
+        </span>
     </section>
 
-    <!-- Sección de productos -->
-    <section id="productos" class="body-section">
-        <h2>Nuestros Productos para Mujeres</h2>
-        <article class="container-women-shop">
+    <section class="container-mujeres-shop">
+        <article class="mujeres-item-shop">
+            <figure class="figura-mujeres-shop">
+                <a href="productos-mujeres/producto1.html">
+                <img class="imagen-mujeres-shop" src="img/mujer/img.4.avif" data-hover="img/mujeres/cambio1-2.avif" alt="" />
+                </a>
+            </figure>
+            <section class="info-producto-shop">
+                <section class="info-header-mujeres-shop"> 
+                    <h2 class="titulo-mujeres-shop">Zapatillas Deportivas</h2>
+                    <h3 class="marca-mujeres-shop">Mujer/PUMA</h3>
+                    <h4 class="color-mujeres-shop">Negro</h4>
+                </section>
+                <p class="precio-mujeres-shop">S/199</p>
+            </section>
+        </article>
 
-            <!-- Producto 1 -->
-            <article class="women-item-shop">
-                <figure class="figura-women-shop">
-                    <img src="img/mujer/img.avif" alt="Zapatillas de running Deviate NITRO™ Elite 3 para mujer" class="imagen-women-shop">
-                </figure>
-                <h3 class="titulo-women-shop">Zapatillas de running Deviate NITRO™ Elite 3 para mujer</h3>
-                <span class="precio-women-shop">S/ 799.00</span>
-                <a href="#" class="boton-compra-women">Comprar</a>
-            </article>
+        <article class="mujeres-item-shop">
+            <figure class="figura-mujeres-shop">
+                <a href="productos-mujeres/producto2.html">
+                <img class="imagen-mujeres-shop" src="img/mujer/img.2.avif" data-hover="img/mujeres/cambio2.avif" alt="" />
+                </a>
+            </figure>
+            <section class="info-producto-shop">
+                <section class="info-header-mujeres-shop"> 
+                    <h2 class="titulo-mujeres-shop">Zapatillas Deportivas</h2>
+                    <h3 class="marca-mujeres-shop">Mujer/PUMA </h3>
+                    <h4 class="color-mujeres-shop">Blanco luminoso</h4>
+                </section>
+                <p class="precio-mujeres-shop">S/399</p>
+            </section>
+        </article>
 
-            <!-- Producto 2 -->
-            <article class="women-item-shop">
-                <figure class="figura-women-shop">
-                    <img src="img/mujer/img.2.avif" alt="Chimpunes KING ULTIMATE Launch Edition FG/AG unisex" class="imagen-women-shop">
-                </figure>
-                <h3 class="titulo-women-shop">Chimpunes KING ULTIMATE Launch Edition FG/AG unisex</h3>
-                <span class="precio-women-shop">S/ 799.00</span>
-                <a href="#" class="boton-compra-women">Comprar</a>
-            </article>
+        <article class="mujeres-item-shop">
+            <figure class="figura-mujeres-shop">
+                <img class="imagen-mujeres-shop" src="img/mujer/img.3.avif" data-hover="img/mujeres/cambio3.avif" alt="" />
+            </figure>
+            <section class="info-producto-shop">
+                <section class="info-header-mujeres-shop"> 
+                    <h2 class="titulo-mujeres-shop">Zapatillas Deportivas</h2>
+                    <h3 class="marca-mujeres-shop">Mujer/ADIDAS</h3>
+                    <h4 class="color-mujeres-shop">Lila</h4>
+                </section>
+                <p class="precio-mujeres-shop">S/150</p>
+            </section>
+        </article>
 
-            <!-- Producto 3 -->
-            <article class="women-item-shop">
-                <figure class="figura-women-shop">
-                    <img src="img/mujer/img.3.avif" alt="Zapatillas de running Deviate NITRO™ Elite 3 para mujer" class="imagen-women-shop">
-                </figure>
-                <h3 class="titulo-women-shop">Zapatillas de running Deviate NITRO™ Elite 3 para mujer</h3>
-                <span class="precio-women-shop">S/ 799.00</span>
-                <a href="#" class="boton-compra-women">Comprar</a>
-            </article>
+        <article class="mujeres-item-shop">
+            <figure class="figura-mujeres-shop">
+                <img class="imagen-mujeres-shop" src="img/mujer/img.4.avif" data-hover="img/mujeres/cambio4.avif" alt="" />
+            </figure>
+            <section class="info-producto-shop">
+                <section class="info-header-mujeres-shop"> 
+                    <h2 class="titulo-mujeres-shop">Zapatillas Deportivas</h2>
+                    <h3 class="marca-mujeres-shop">Mujer/ADIDAS</h3>
+                    <h4 class="color-mujeres-shop">Rosa</h4>
+                </section>
+                <p class="precio-mujeres-shop">S/120</p>
+            </section>
+        </article>
 
-            <!-- Producto 4 -->
-            <article class="women-item-shop">
-                <figure class="figura-women-shop">
-                    <img src="img/mujer/img.4.avif" alt="Zapatillas de running MagMax NITRO™ para mujer" class="imagen-women-shop">
-                </figure>
-                <h3 class="titulo-women-shop">Zapatillas de running MagMax NITRO™ para mujer</h3>
-                <span class="precio-women-shop">S/ 799.00</span>
-                <a href="#" class="boton-compra-women">Comprar</a>
-            </article>
-
+        <article class="mujeres-item-shop">
+            <figure class="figura-mujeres-shop">
+                <a href="producto1.html">
+                    <img class="imagen-mujeres-shop" src="img/mujer/img.4.avif" data-hover="img/mujeres/cambio5.jpg" alt="" />
+                </a>
+            </figure>
+            <section class="info-producto-shop">
+                <section class="info-header-mujeres-shop"> 
+                    <h2 class="titulo-mujeres-shop">Zapatillas Deportivas</h2>
+                    <h3 class="marca-mujeres-shop">Mujer/PUMA</h3>
+                    <h4 class="color-mujeres-shop">Rojo</h4>
+                </section>
+                <p class="precio-mujeres-shop">S/300</p>
+            </section>
         </article>
     </section>
-
+    
     <footer>
         <section class="box-footer-general">
             <article class="box-footer">
                 <section class="box-footer-2">
-                    <article class="footer-acerca-ayuda">
+                    <section class="footer-acerca-ayuda">
                         <article class="footer-acerca">
                             <h4>ACERCA DE PUMA</h4>
                             <ul>
@@ -117,8 +156,8 @@
                                 <li><a class="anchor-footer" href="#">Centro de ayuda</a></li>
                             </ul>
                         </article>
-                    </article>
-                    <article class="footer-redes">
+                    </section>
+                    <section class="footer-redes">
                         <article class="horario-atencion">
                             <h4>HORARIOS DE ATENCIÓN</h4>
                             <ul>
@@ -130,19 +169,16 @@
                             <h4>SÍGUENOS</h4>
                             <nav class="social-networks">
                                 <a href="#" target="_blank"><i class="bi bi-facebook"></i></a>
-                                <a href="#" target="_blank"><i class="bi bi-whatsapp"></i></a>
                                 <a href="#" target="_blank"><i class="bi bi-instagram"></i></a>
+                                <a href="#" target="_blank"><i class="bi bi-twitter"></i></a>
+                                <a href="#" target="_blank"><i class="bi bi-youtube"></i></a>
                             </nav>
                         </aside>
-                    </article>
+                    </section>
                 </section>
             </article>
         </section>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-            crossorigin="anonymous"></script>
-    <script src="js/general.js"></script>
 </body>
+
 </html>
