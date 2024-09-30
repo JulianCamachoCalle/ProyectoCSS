@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FENTY x PUMA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet/less" type="text/css" href="less/login.less" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <header>
+        <p>ENVÍO GRATIS POR COMPRAS MAYORES A S/ 250. <a href="sale.html">Ver más</a></p>
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="img/logo-puma.jpg" alt="Puma logo">
+            </a>
+            <button class="menu-hamburguesa" onclick="toggleMenu()">&#9776;</button>
+            <ul>
+                <li><a href="mujer.html">Mujer</a></li>
+                <li><a href="hombre.html">Hombre</a></li>
+                <li><a href="ninos.html">Niños</a></li>
+                <li><a href="deportes.html">Deportes</a></li>
+                <li><a href="colecciones.html">Colecciones</a></li>
+                <li><a href="fenty.html">FENTY x PUMA</a></li>
+            </ul>
+            <form class="search-form">
+                <input type="text" placeholder="BUSCAR EN PUMA">
+                <button type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <a href="login.html" class="login">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+            </form>
+        </nav>
+    </header>
+    <main id="main" class="main">
+        <section class="contenedor" id="contenedor">
+            <article class="form-contenedor crear-cuenta">
+                <form action="#" method="POST">
+                    <h1>Crear una Cuenta</h1>
+                    <section class="social-iconos">
+                        <a href="#" class="iconos">
+                            <i class="fa-brands fa-google-plus-g"></i>
+                        </a>
+                        <a href="#" class="iconos">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="iconos">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </section>
+                    <span>O usa tu correo y contraseña</span>
+                    <input type="text" name="nombres" id="nombres" placeholder="Nombres y Apellidos" required>
+                    <input type="text" name="direccion" id="direccion" placeholder="Dirección" required>
+                    <select id="distritos" name="distritos" required>
+                        <option value="">Distrito</option>
+                        <option value="Ancón">Ancón</option>
+                        <option value="Ate">Ate</option>
+                        <option value="Barranco">Barranco</option>
+                        <option value="Breña">Breña</option>
+                        <option value="Carabayllo">Carabayllo</option>
+                        <option value="Chaclacayo">Chaclacayo</option>
+                        <option value="Chorrillos">Chorrillos</option>
+                        <option value="Cieneguilla">Cieneguilla</option>
+                        <option value="Comas">Comas</option>
+                        <option value="El Agustino">El Agustino</option>
+                        <option value="Independencia">Independencia</option>
+                        <option value="Jesús María">Jesús María</option>
+                        <option value="La Molina">La Molina</option>
+                        <option value="La Victoria">La Victoria</option>
+                        <option value="Lince">Lince</option>
+                        <option value="Los Olivos">Los Olivos</option>
+                        <option value="Lurigancho">Lurigancho</option>
+                        <option value="Lurín">Lurín</option>
+                        <option value="Magdalena del Mar">Magdalena del Mar</option>
+                        <option value="Miraflores">Miraflores</option>
+                        <option value="Pachacámac">Pachacámac</option>
+                        <option value="Pucusana">Pucusana</option>
+                        <option value="Pueblo Libre">Pueblo Libre</option>
+                        <option value="Puente Piedra">Puente Piedra</option>
+                        <option value="Punta Hermosa">Punta Hermosa</option>
+                        <option value="Punta Negra">Punta Negra</option>
+                        <option value="Rímac">Rímac</option>
+                        <option value="San Bartolo">San Bartolo</option>
+                        <option value="San Borja">San Borja</option>
+                        <option value="San Isidro">San Isidro</option>
+                        <option value="San Juan de Lurigancho">San Juan de Lurigancho</option>
+                        <option value="San Juan de Miraflores">San Juan de Miraflores</option>
+                        <option value="San Luis">San Luis</option>
+                        <option value="San Martín de Porres">San Martín de Porres</option>
+                        <option value="San Miguel">San Miguel</option>
+                        <option value="Santa Anita">Santa Anita</option>
+                        <option value="Santa María del Mar">Santa María del Mar</option>
+                        <option value="Santa Rosa">Santa Rosa</option>
+                        <option value="Santiago de Surco">Santiago de Surco</option>
+                        <option value="Surquillo">Surquillo</option>
+                        <option value="Villa El Salvador">Villa El Salvador</option>
+                        <option value="Villa María del Triunfo">Villa María del Triunfo</option>
+                    </select>
+                    <input type="email" name="correo" id="correo" placeholder="Correo" required>
+                    <input type="password" name="password" id="password" placeholder="Contraseña" required>
+                    <input type="password" name="password2" id="password2" placeholder="Repetir Contraseña" required>
+                    <button type="submit" name="registro">Registrarse</button>
+                </form>
+            </article>
+
+            <article class="form-contenedor iniciar-sesion">
+                <form action="#" method="POST">
+                    <h1>Iniciar Sesión</h1>
+                    <section class="social-iconos">
+                        <a href="#" class="iconos">
+                            <i class="fa-brands fa-google-plus-g"></i>
+                        </a>
+                        <a href="#" class="iconos">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="iconos">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </section>
+                    <span>Usa tu correo y contraseña</span>
+                    <input type="email" name="correo" placeholder="Correo" required>
+                    <input type="password" name="password" placeholder="Contraseña" required>
+                    <a href="#">Olvidaste tu contraseña?</a>
+                    <button type="submit">Iniciar Sesión</button>
+                </form>
+            </article>
+
+            <section class="cambiar-contenedor">
+                <section class="cambiar">
+                    <article class="cambiar-panel cambiar-izquierda">
+                        <h1>Bienvenido!</h1>
+                        <p>Ingresa todos tus datos correspondientes</p>
+                        <button class="ocultar" id="login">Iniciar Sesión</button>
+                    </article>
+                    <article class="cambiar-panel cambiar-derecha">
+                        <h1>Buen Día!</h1>
+                        <p>Registra todos tus datos!</p>
+                        <button class="ocultar" id="register">Registrarse</button>
+                    </article>
+                </section>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <section class="box-footer-general">
+            <article class="box-footer">
+                <section class="box-footer-2">
+                    <section class="footer-acerca-ayuda">
+                        <article class="footer-acerca">
+                            <h4>ACERCA DE PUMA</h4>
+                            <ul>
+                                <li><a class="anchor-footer" href="#">Trabaja con nosotros</a></li>
+                                <li><a class="anchor-footer" href="#">Noticias corporativas</a></li>
+                                <li><a class="anchor-footer" href="#">Buscador de tiendas</a></li>
+                            </ul>
+                        </article>
+                        <article class="footer-ayuda">
+                            <h4>AYUDA</h4>
+                            <ul>
+                                <li><a class="anchor-footer" href="#">Opciones de pago</a></li>
+                                <li><a class="anchor-footer" href="#">Tipos de envío</a></li>
+                                <li><a class="anchor-footer" href="#">Términos y condiciones</a></li>
+                                <li><a class="anchor-footer" href="#">Centro de ayuda</a></li>
+                            </ul>
+                        </article>
+                    </section>
+                    <section class="footer-redes">
+                        <article class="horario-atencion">
+                            <h4>HORARIOS DE ATENCIÓN</h4>
+                            <ul>
+                                <li class="anchor-footer horario">Lunes a Viernes: 8:30 am - 6:00 pm</li>
+                                <li class="anchor-footer horario">Sábados: 9:00 am - 6:30 pm</li>
+                            </ul>
+                        </article>
+                        <aside>
+                            <h4>SÍGUENOS</h4>
+                            <nav class="social-networks">
+                                <a href="#" target="_blank"><i class="bi bi-facebook"></i></a>
+                                <a href="#" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                                <a href="#" target="_blank"><i class="bi bi-instagram"></i></a>
+                            </nav>
+                        </aside>
+                    </section>
+                </section>
+            </article>
+        </section>
+    </footer>
+    <script src="js/login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/less"></script>
+    <script src="js/general.js"></script>
+</body>
+
+</html>
