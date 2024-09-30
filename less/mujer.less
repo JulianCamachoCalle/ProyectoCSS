@@ -1,8 +1,8 @@
-@women-font: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-@women-primary-color: #000;
-@women-accent-color: #d70024;
+@mujeres-font: 'Arial Narrow', 'Arial', sans-serif;
+@mujeres-primary-color: #000;
+@mujeres-accent-color: #d70024;
 
-.container-women-shop {
+.container-mujeres-shop {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -17,18 +17,18 @@
   }
 }
 
-.women-item-shop {
+.mujeres-item-shop {
   border-radius: 10px;
 
   &:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
   }
 
-  .figura-women-shop {
+  .figura-mujeres-shop {
     overflow: hidden;
   }
 
-  .imagen-women-shop {
+  .imagen-mujeres-shop {
     width: 100%;
     height: 300px;
     object-fit: cover;
@@ -48,51 +48,47 @@
   flex-direction: column;
   gap: 10px;
 
-  .titulo-women-shop,
-  .marca-women-shop,
-  .color-women-shop {
+  .titulo-mujeres-shop,
+  .marca-mujeres-shop,
+  .color-mujeres-shop {
     font-weight: bold;
-    color: @women-primary-color;
-    font-family: @women-font;
+    color: @mujeres-primary-color;
+    font-family: @mujeres-font;
   }
 
-  .titulo-women-shop {
+  .titulo-mujeres-shop {
     font-size: 25px;
   }
 
-  .marca-women-shop {
+  .marca-mujeres-shop {
     font-size: 18px;
   }
 
-  .color-women-shop {
+  .color-mujeres-shop {
     font-size: 16px;
   }
 }
 
-.precio-women-shop {
+.precio-mujeres-shop {
   font-weight: bold;
   font-size: 0.88em;
-  font-family: @women-font;
-  color: @women-accent-color;
+  font-family: @mujeres-font;
+  color: @mujeres-accent-color;
 }
 
-.boton-compra-women {
+.boton-compra-mujeres {
   border: none;
-  background-color: @women-primary-color;
+  background-color: @mujeres-primary-color;
   color: #fff;
   padding: 15px 10px;
   cursor: pointer;
-
-  &:hover {
-    background-color: darken(@women-primary-color, 10%);
-  }
 }
 
-.carrito-vacio-women {
+.carrito-vacio-mujeres {
   padding: 20px;
   text-align: center;
 }
 
-.hidden-women {
+.hidden-mujeres {
   display: none;
 }
