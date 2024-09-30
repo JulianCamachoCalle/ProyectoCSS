@@ -1,0 +1,98 @@
+@hombres-font: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+@hombres-primary-color: #000;
+@hombres-accent-color: #d70024;
+
+.title{
+    justify-content: center;
+}
+
+.container-hombres-shop {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+
+  // Estilo para pantallas más pequeñas
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr; // Columna única en pantallas pequeñas
+  }
+}
+
+.hombres-item-shop {
+  border-radius: 10px;
+
+  &:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+  }
+
+  .figura-hombres-shop {
+    overflow: hidden;
+  }
+
+  .imagen-hombres-shop {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    transition: all 0.5s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+
+.info-producto-shop {
+  padding: 15px 30px;
+  line-height: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .titulo-hombres-shop,
+  .marca-hombres-shop,
+  .color-hombres-shop {
+    font-weight: bold;
+    color: @hombres-primary-color;
+    font-family: @hombres-font;
+  }
+
+  .titulo-hombres-shop {
+    font-size: 25px;
+  }
+
+  .marca-hombres-shop {
+    font-size: 18px;
+  }
+
+  .color-hombres-shop {
+    font-size: 16px;
+  }
+}
+
+.precio-hombres-shop {
+  font-weight: bold;
+  font-size: 0.88em;
+  font-family: @hombres-font;
+  color: @hombres-accent-color;
+}
+
+.boton-compra-hombres {
+  border: none;
+  background-color: @hombres-primary-color;
+  color: #fff;
+  padding: 15px 10px;
+  cursor: pointer;
+}
+
+.carrito-vacio-hombres {
+  padding: 20px;
+  text-align: center;
+}
+
+.hidden-hombres {
+  display: none;
+}
