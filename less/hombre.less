@@ -6,10 +6,14 @@
     justify-content: center;
 }
 
+
 .container-hombres-shop {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+
+
+
 
   // Estilo para pantallas más pequeñas
   @media (max-width: 1024px) {
@@ -96,3 +100,68 @@
 .hidden-hombres {
   display: none;
 }
+
+
+
+//ANIMACION
+
+.hombres-products {
+  display: flex;  // Usamos flexbox para alinear los elementos
+  align-items: center;  // Alinea verticalmente la imagen al texto
+
+  h2 {
+    margin-right: 10px;  // Espacio entre el título y la imagen
+    font-size: 2rem;     // Ajusta el tamaño de la fuente según tus necesidades
+  }
+
+  .en-stock-container {
+    display: inline-block;
+    position: relative;   // Posicionamiento para la animación
+  }
+
+  .en-stock {
+    width: 200px;           // Ajusta el tamaño de la imagen según necesites
+    animation: movimiento 3s infinite alternate; // Animación de movimiento
+  }
+}
+
+// Animación para el movimiento de la imagen
+@keyframes movimiento {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(20px);  // Ajusta la distancia de movimiento
+  }
+}
+.en-stock-container {
+  display: flex;
+  align-items: center; /* Alinea verticalmente el contenido */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  gap: 10px; /* Espacio entre el texto y la imagen */
+  padding: 10px;
+
+  h2 {
+    font-size: 24px;
+    margin: 0;
+    font-family: @hombres-font;
+    color: @hombres-primary-color;
+  }
+
+  .en-stock {
+    width: 300px; /* Ajusta el tamaño de la imagen para que sea proporcional */
+    height: auto;
+    animation: slide 3s ease-in-out infinite alternate; /* Añade la animación */
+  }
+}
+
+/* Animación para mover la imagen de un lado a otro */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(50px); /* Distancia de desplazamiento */
+  }
+}
+
