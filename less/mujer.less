@@ -4,61 +4,78 @@
 @mujeres-primary-color: #000;
 @mujeres-accent-color: #d70024;
 
-// Contenedor principal que controla la disposición de los cuadros
-.container-women-shop {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); // Tres columnas por fila
-  gap: 30px; // Espaciado entre los cuadros
-  padding: 20px;
-  justify-items: center; // Centra los cuadros horizontalmente
-
-  // Ajuste de columnas para pantallas medianas
-  @media (max-width: 1024px) {
-    grid-template-columns: repeat(2, 1fr); // Dos columnas por fila
+/* Animación compleja */
+@keyframes complexAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px) rotate(-15deg) scale(0.8);
   }
-
-  // Ajuste para pantallas pequeñas
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr; // Una sola columna en móviles
+  50% {
+    opacity: 0.5;
+    transform: translateX(20px) rotate(5deg) scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotate(0deg) scale(1);
   }
 }
 
-// Diseño de cada cuadro de producto
+/* Contenedor principal que controla la disposición de los cuadros */
+.container-women-shop {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas por fila */
+  gap: 30px; /* Espaciado entre los cuadros */
+  padding: 20px;
+  justify-items: center; /* Centra los cuadros horizontalmente */
+
+  /* Ajuste de columnas para pantallas medianas */
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas por fila */
+  }
+
+  /* Ajuste para pantallas pequeñas */
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr; /* Una sola columna en móviles */
+  }
+}
+
+/* Diseño de cada cuadro de producto */
 .women-item-shop {
-  border: 2px solid #ccc; // Borde visible para destacar cada cuadro
-  border-radius: 15px; // Bordes redondeados
-  overflow: hidden; // Para evitar que el contenido sobresalga
+  border: 2px solid #ccc; /* Borde visible para destacar cada cuadro */
+  border-radius: 15px; /* Bordes redondeados */
+  overflow: hidden; /* Para evitar que el contenido sobresalga */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   transition: box-shadow 0.3s ease-in-out;
-  width: 100%; // Se adapta al ancho del contenedor
-  max-width: 320px; // Limita el tamaño máximo de cada cuadro
+  width: 100%; /* Se adapta al ancho del contenedor */
+  max-width: 320px; /* Limita el tamaño máximo de cada cuadro */
+  animation: complexAnimation 1s ease-in-out; /* Aplicamos la animación compleja */
 
-  // Sombra al hacer hover
+  /* Sombra al hacer hover */
   &:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
   }
 
-  // Imagen del producto
+  /* Imagen del producto */
   .figura-women-shop {
     margin: 0;
   }
 
   .imagen-women-shop {
     width: 100%;
-    height: 250px; // Fija la altura de la imagen
-    object-fit: cover; // Para mantener el aspecto de la imagen
+    height: 250px; /* Fija la altura de la imagen */
+    object-fit: cover; /* Para mantener el aspecto de la imagen */
     transition: transform 0.5s;
 
-    // Zoom al pasar el mouse
+    /* Zoom al pasar el mouse */
     &:hover {
       transform: scale(1.1);
     }
   }
 }
 
-// Información del producto en el cuadro
+/* Información del producto en el cuadro */
 .info-producto-shop {
   padding: 15px;
   display: flex;
@@ -71,7 +88,7 @@
     font-weight: bold;
     color: @mujeres-primary-color;
     font-family: @mujeres-font;
-    text-align: center; // Centra el texto en cada cuadro
+    text-align: center; /* Centra el texto en cada cuadro */
   }
 
   .titulo-women-shop {
@@ -87,17 +104,18 @@
   }
 }
 
-// Precio del producto
+/* Precio del producto */
 .precio-women-shop {
   font-weight: bold;
   font-size: 1.2em;
   font-family: @mujeres-font;
   color: @mujeres-accent-color;
-  text-align: center; // Centra el precio en el cuadro
+  text-align: center; /* Centra el precio en el cuadro */
   margin-bottom: 10px;
+  animation: complexAnimation 1s ease-in-out; /* Aplicamos la animación compleja */
 }
 
-// Botón de compra
+/* Botón de compra */
 .boton-compra-women {
   border: none;
   background-color: @mujeres-primary-color;
@@ -105,12 +123,37 @@
   padding: 10px 20px;
   cursor: pointer;
   text-align: center;
-  border-radius: 5px; // Bordes redondeados del botón
+  border-radius: 5px; /* Bordes redondeados del botón */
   transition: background-color 0.3s ease-in-out;
-  margin: 0 auto; // Centra el botón en el cuadro
+  margin: 0 auto; /* Centra el botón en el cuadro */
+  animation: complexAnimation 1s ease-in-out; /* Aplicamos la animación compleja */
 
-  // Cambio de color al hacer hover
+  /* Cambio de color al hacer hover */
   &:hover {
     background-color: lighten(@mujeres-primary-color, 10%);
+  }
+}
+
+
+.galeriapromo {
+  display: flex;
+  height: 30rem;
+  gap: 1rem;
+
+  section {
+      flex: 1;
+      border-radius: 1rem;
+      overflow: hidden;
+      transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
+
+      img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+      }
+
+      &:hover {
+          flex: 5;
+      }
   }
 }
