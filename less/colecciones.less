@@ -157,3 +157,31 @@
         }
     }
 }
+
+.puma-logo-section {
+    img {
+        width: 150px;
+        position: relative;
+        left: 0;
+        transition: transform 1s ease;
+    }
+
+    img:hover {
+        animation: slideOutToLeftAndInFromRight 2s ease;
+    }
+}
+
+@keyframes slideOutToLeftAndInFromRight {
+    0% {
+        transform: translateX(0);  // Posición inicial
+    }
+    50% {
+        transform: translateX(-100vw);  // Se desplaza completamente a la izquierda
+    }
+    51% {
+        transform: translateX(100vw);  // Aparece desde la derecha
+    }
+    100% {
+        transform: translateX(0);  // Vuelve a la posición original
+    }
+}
