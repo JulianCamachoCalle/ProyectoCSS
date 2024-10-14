@@ -96,3 +96,36 @@
 .hidden-deporte {
   display: none;
 }
+
+//Animacion de Modelos
+.galeriapromo {
+  display: flex;
+  height: 30rem;
+  gap: 1rem;
+
+  section {
+      flex: 1;
+      border-radius: 1rem;
+      overflow: hidden;
+      transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
+
+      img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+      }
+
+      &:hover {
+          flex: 5;
+      }
+  }
+  
+  // Imágenes
+  //.promo1 { background-image: url('../img/Deporte/P1.avif'); }
+  //.promo2 { background-image: url('../img/Deporte/P2.avif'); }
+  //.promo3 { background-image: url('../img/Deporte/P3.avif'); }
+  //.promo4 { background-image: url('../img/Deporte/P4.avif'); }
+  //.promo5 { background-image: url('../img/Deporte/P5.avif'); }
+  //.promo6 { background-image: url('../img/Deporte/P6.avif'); }
+  //.promo7 { background-image: url('../img/Deporte/P7.avif'); }
+}
