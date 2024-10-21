@@ -4,16 +4,99 @@
 @mujeres-primary-color: #000;
 @mujeres-accent-color: #d70024;
 
+/* Definir la ruta de la imagen de fondo */
+@fondoBienvenida: "img/mujer/fondo.avif";
+
+/* Estilos para la sección de bienvenida */
+.welcome-section {
+  background-image: url(@fondoBienvenida);
+  /* Imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  /* Ocupa la altura completa de la ventana */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  flex-direction: column;
+  padding: 20px;
+  margin-bottom: 50px;
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+  }
+
+  .mujeres-products {
+    h1 {
+      font-size: 2rem;
+      color: white;
+    }
+  }
+}
+
+.promo1 {
+  background-image: url(img/mujer/mujer1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.promo2 {
+  background-image: url(img/mujer/mujer2.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.promo3 {
+  background-image: url(img/mujer/mujer3.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.promo4 {
+  background-image: url(img/mujer/mujer4.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.promo5 {
+  background-image: url(img/mujer/mujer5.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.promo6 {
+  background-image: url(img/mujer/mujer6.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.promo7 {
+  background-image: url(img/mujer/mujer7.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+
 /* Animación compleja */
 @keyframes complexAnimation {
   0% {
     opacity: 0;
     transform: translateX(-100px) rotate(-15deg) scale(0.8);
   }
+
   50% {
     opacity: 0.5;
     transform: translateX(20px) rotate(5deg) scale(1.05);
   }
+
   100% {
     opacity: 1;
     transform: translateX(0) rotate(0deg) scale(1);
@@ -23,23 +106,59 @@
 /* Contenedor principal que controla la disposición de los cuadros */
 .container-women-shop {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Tres columnas por fila */
-  gap: 30px; /* Espaciado entre los cuadros */
+  grid-template-columns: repeat(3, 1fr);
+  /* Tres columnas por fila */
+  gap: 30px;
+  /* Espaciado entre los cuadros */
   padding: 20px;
-  justify-items: center; /* Centra los cuadros horizontalmente */
+  justify-items: center;
+  /* Centra los cuadros horizontalmente */
 
   /* Ajuste de columnas para pantallas medianas */
   @media (max-width: 1024px) {
-    grid-template-columns: repeat(2, 1fr); /* Dos columnas por fila */
+    grid-template-columns: repeat(2, 1fr);
+    /* Dos columnas por fila */
   }
 
   /* Ajuste para pantallas pequeñas */
   @media (max-width: 768px) {
-    grid-template-columns: 1fr; /* Una sola columna en móviles */
+    grid-template-columns: 1fr;
+    /* Una sola columna en móviles */
   }
 }
 
 /* Diseño de cada cuadro de producto */
+// .women-item-shop {
+//   border: 2px solid #ccc;
+//   /* Borde visible para destacar cada cuadro */
+//   border-radius: 15px;
+//   /* Bordes redondeados */
+//   overflow: hidden;
+//   /* Para evitar que el contenido sobresalga */
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   transition: box-shadow 0.3s ease-in-out;
+//   width: 100%;
+//   /* Se adapta al ancho del contenedor */
+//   max-width: 320px;
+//   /* Limita el tamaño máximo de cada cuadro */
+//   animation: complexAnimation 1s ease-in-out;
+//   /* Aplicamos la animación compleja */
+
+//   /* Sombra al hacer hover */
+//   &:hover {
+//     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+//   }
+
+//   /* Imagen del producto */
+//   .figura-women-shop {
+//     background-image: url(img/mujer/mujer7.jpg);
+//     background-size: cover;
+//     background-position: center;
+//   }
+// }
+
 .women-item-shop {
   border: 2px solid #ccc; /* Borde visible para destacar cada cuadro */
   border-radius: 15px; /* Bordes redondeados */
@@ -58,22 +177,87 @@
   }
 
   /* Imagen del producto */
-  .figura-women-shop {
-    margin: 0;
+  .figura-women-shop-1 {
+    background-image: url(img/mujer/img.avif);
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    // width: 100%;
   }
 
-  .imagen-women-shop {
-    width: 100%;
-    height: 250px; /* Fija la altura de la imagen */
-    object-fit: cover; /* Para mantener el aspecto de la imagen */
-    transition: transform 0.5s;
-
-    /* Zoom al pasar el mouse */
-    &:hover {
-      transform: scale(1.1);
-    }
+  .figura-women-shop-1:hover {
+    transform: scale(1.2);
   }
+
+  .figura-women-shop-2 {
+    background-image: url(img/mujer/img.3.avif);
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    // width: 100%;
+  }
+
+  .figura-women-shop-2:hover {
+    transform: scale(1.2);
+  }
+
+  .figura-women-shop-3 {
+    background-image: url(img/mujer/img.4.avif);
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    // width: 100%;
+  }
+
+  .figura-women-shop-3:hover {
+    transform: scale(1.2);
+  }
+
+  .figura-women-shop-4 {
+    background-image: url(img/mujer/img.5.avif);
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    // width: 100%;
+  }
+
+  .figura-women-shop-4:hover {
+    transform: scale(1.2);
+  }
+
+  .figura-women-shop-5 {
+    background-image: url(img/mujer/img.6.avif);
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    // width: 100%;
+  }
+
+  .figura-women-shop-5:hover {
+    transform: scale(1.2);
+  }
+
+  .figura-women-shop-6 {
+    background-image: url(img/mujer/img.7.avif);
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    // width: 100%;
+  }
+
+  .figura-women-shop-6:hover {
+    transform: scale(1.2);
+  }
+
+
 }
+
+.modelos{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
 
 /* Información del producto en el cuadro */
 .info-producto-shop {
@@ -88,7 +272,8 @@
     font-weight: bold;
     color: @mujeres-primary-color;
     font-family: @mujeres-font;
-    text-align: center; /* Centra el texto en cada cuadro */
+margin: auto;
+    /* Centra el texto en cada cuadro */
   }
 
   .titulo-women-shop {
@@ -110,9 +295,11 @@
   font-size: 1.2em;
   font-family: @mujeres-font;
   color: @mujeres-accent-color;
-  text-align: center; /* Centra el precio en el cuadro */
+  text-align: center;
+  /* Centra el precio en el cuadro */
   margin-bottom: 10px;
-  animation: complexAnimation 1s ease-in-out; /* Aplicamos la animación compleja */
+  animation: complexAnimation 1s ease-in-out;
+  /* Aplicamos la animación compleja */
 }
 
 /* Botón de compra */
@@ -123,10 +310,13 @@
   padding: 10px 20px;
   cursor: pointer;
   text-align: center;
-  border-radius: 5px; /* Bordes redondeados del botón */
+  border-radius: 5px;
+  /* Bordes redondeados del botón */
   transition: background-color 0.3s ease-in-out;
-  margin: 0 auto; /* Centra el botón en el cuadro */
-  animation: complexAnimation 1s ease-in-out; /* Aplicamos la animación compleja */
+  margin: 0 auto;
+  /* Centra el botón en el cuadro */
+  animation: complexAnimation 1s ease-in-out;
+  /* Aplicamos la animación compleja */
 
   /* Cambio de color al hacer hover */
   &:hover {
@@ -141,19 +331,36 @@
   gap: 1rem;
 
   section {
-      flex: 1;
-      border-radius: 1rem;
-      overflow: hidden;
-      transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
+    flex: 1;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
 
-      img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-      }
-
-      &:hover {
-          flex: 5;
-      }
+    &:hover {
+      flex: 5;
+    }
   }
+}
+
+@keyframes colorAnimation {
+  0% {
+    color: #ff69b4; /* Rosa fuerte */
+  }
+  25% {
+    color: #ff4500; /* Naranja */
+  }
+  50% {
+    color: #32cd32; /* Verde */
+  }
+  75% {
+    color: #1e90ff; /* Azul */
+  }
+  100% {
+    color: #ff69b4; /* Vuelve al rosa */
+  }
+}
+
+
+.mensaje-bien {
+  animation: colorAnimation 5s infinite;;
 }
