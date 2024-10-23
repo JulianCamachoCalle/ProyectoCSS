@@ -109,7 +109,7 @@
     position: relative;   // Posicionamiento para la animación
 
 
-    width: 1450px;           // Ajusta el tamaño de la imagen según necesites
+    width: 1700px;           // Ajusta el tamaño de la imagen según necesites
     animation: movimiento 1s infinite alternate; // Animación de movimiento
 
 
@@ -119,7 +119,7 @@
     gap: 10px; /* Espacio entre el texto y la imagen */
     padding: 10px;
 
-    width: 1450px; /* Ajusta el tamaño de la imagen para que sea proporcional */
+    width: 1700px; /* Ajusta el tamaño de la imagen para que sea proporcional */
     height: auto;
     animation: slide 4s ease-in-out infinite alternate; /* Añade la animación */
   
@@ -133,6 +133,51 @@
     transform: translateX(100%); /* Distancia de desplazamiento */
   }
 }
+}
+
+
+//CARRUSEL DE IMAGENES//
+
+.image-carousel {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; // Ajuste para pantallas pequeñas
+  margin: 20px 0;
+
+  .carousel-item {
+    flex: 1 1 calc(33.33% - 10px); // Tres imágenes por fila
+    margin: 5px;
+    text-align: center;
+
+    .carousel-img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1); // Efecto zoom
+      }
+    }
+
+    .carousel-caption {
+      font-size: 0.9rem;
+      margin-top: 10px;
+      color: #333;
+    }
+  }
+
+  // Adaptación responsiva
+  @media (max-width: 768px) {
+    .carousel-item {
+      flex: 1 1 calc(50% - 10px); // Dos imágenes por fila en pantallas más pequeñas
+    }
+  }
+
+  @media (max-width: 480px) {
+    .carousel-item {
+      flex: 1 1 100%; // Una imagen por fila en pantallas pequeñas
+    }
+  }
 }
 
 
