@@ -158,30 +158,83 @@
     }
 }
 
-.puma-logo-section {
-    img {
-        width: 150px;
-        position: relative;
-        left: 0;
-        transition: transform 1s ease;
-    }
+//ANIMACION PRODUCTOS
 
-    img:hover {
-        animation: slideOutToLeftAndInFromRight 2s ease;
+.sliding-text {
+    position: relative;
+    animation: slide 3.5s infinite alternate;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(40%);
+    }
+    100% {
+      transform: translateX(-40%);
+    }
+  }
+
+.colecciones-products {
+    overflow: hidden; /* Asegura que no se muestren elementos fuera de la sección */
+}
+
+.producto {
+    opacity: 0; /* Inicia oculto */
+    transform: translateX(-20px); /* Inicia desplazado hacia la izquierda */
+    animation: slideIn 0.5s forwards; /* Aplica la animación */
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1; /* Finaliza visible */
+        transform: translateX(0); /* Vuelve a la posición original */
     }
 }
 
-@keyframes slideOutToLeftAndInFromRight {
-    0% {
-        transform: translateX(0);  // Posición inicial
+/* Agrega una animación de deslizamiento al hacer scroll */
+@media (prefers-reduced-motion: no-preference) {
+    .producto {
+        animation: slideIn 2s forwards;
     }
-    50% {
-        transform: translateX(-100vw);  // Se desplaza completamente a la izquierda
+}
+
+//ANIMACION LOGO PUMA
+
+.puma-logo-section {
+    img {
+        width: 150px; /* Tamaño inicial */
+        position: relative;
+        left: 0;
+        transition: transform 0.3s ease; /* Transición suave */
     }
-    51% {
-        transform: translateX(100vw);  // Aparece desde la derecha
+
+    img:hover {
+        transform: scale(1.2); /* Aumenta el tamaño al pasar el cursor */
     }
-    100% {
-        transform: translateX(0);  // Vuelve a la posición original
+}
+
+//ANIMACION FOOTER
+
+.box-footer-general {
+    overflow: hidden; /* Asegura que no se muestren elementos fuera de la sección */
+}
+
+.box-footer {
+    opacity: 0; /* Inicia oculto */
+    transform: translateY(20px); /* Inicia desplazado hacia abajo */
+    animation: slideUp 0.5s forwards; /* Aplica la animación */
+}
+
+@keyframes slideUp {
+    to {
+        opacity: 1; /* Finaliza visible */
+        transform: translateY(0); /* Vuelve a la posición original */
+    }
+}
+
+/* Agrega una animación de deslizamiento al hacer scroll */
+@media (prefers-reduced-motion: no-preference) {
+    .box-footer {
+        animation: slideUp 0.5s forwards;
     }
 }
