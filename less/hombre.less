@@ -102,8 +102,42 @@
 }
 
 
+//AGREGUE UNA NUEVA ANIMCION//
 
-//ANIMACION
+.original-logotipo {
+  display: inline-block;
+    position: relative;   // Posicionamiento para la animación
+
+
+    width: 1450px;           // Ajusta el tamaño de la imagen según necesites
+    animation: movimiento 1s infinite alternate; // Animación de movimiento
+
+
+    display: flex;
+    align-items: center; /* Alinea verticalmente el contenido */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    gap: 10px; /* Espacio entre el texto y la imagen */
+    padding: 10px;
+
+    width: 1450px; /* Ajusta el tamaño de la imagen para que sea proporcional */
+    height: auto;
+    animation: slide 4s ease-in-out infinite alternate; /* Añade la animación */
+  
+
+/* Animación para mover la imagen de un lado a otro */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  400% {
+    transform: translateX(100%); /* Distancia de desplazamiento */
+  }
+}
+}
+
+
+
+//ANIMACION NUMERO DOS//
 
 .hombres-products {
   display: flex;  // Usamos flexbox para alinear los elementos
@@ -111,7 +145,7 @@
 
   h2 {
     margin-right: 10px;  // Espacio entre el título y la imagen
-    font-size: 2rem;     // Ajusta el tamaño de la fuente según tus necesidades
+    font-size: 8rem;     // Ajusta el tamaño de la fuente según tus necesidades
   }
 
   .en-stock-container {
@@ -142,7 +176,7 @@
   padding: 10px;
 
   h2 {
-    font-size: 24px;
+    font-size: 70px;
     margin: 0;
     font-family: @hombres-font;
     color: @hombres-primary-color;
@@ -164,4 +198,7 @@
     transform: translateX(50px); /* Distancia de desplazamiento */
   }
 }
+
+
+
 
