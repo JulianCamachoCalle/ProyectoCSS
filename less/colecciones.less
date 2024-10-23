@@ -51,6 +51,50 @@
     }
 }
 
+.colecciones-imagenes {
+    background-color: white; // Fondo blanco
+    color: black; // Texto en negro
+    padding: 20px; // Espaciado interno
+    display: flex; // Usar Flexbox para alinear las imágenes en fila
+    justify-content: space-around; // Espacio entre las secciones
+    flex-wrap: wrap; // Permitir que las secciones se ajusten en caso de que haya más de tres
+
+    .imagen-seccion {
+        position: relative; // Posiciona cada sección de imagen
+        margin: 20px; // Espaciado entre secciones
+        flex: 1 1 30%; // Permite que cada sección ocupe un 30% del ancho del contenedor
+        display: flex; // Activar Flexbox en la sección de imagen
+        justify-content: center; // Centrar horizontalmente
+        align-items: center; // Centrar verticalmente
+        background-color: black; // Fondo negro por defecto
+
+        .imagen-hover {
+            display: block; // Asegura que la imagen ocupe su propio espacio
+            width: 100%; // Asegura que la imagen ocupe todo el contenedor
+            height: auto; // Mantiene la proporción de la imagen
+            transition: opacity 0.5s ease; // Transición suave para la opacidad
+            opacity: 0; // Oculta la imagen por defecto
+        }
+
+        h3 {
+            position: absolute; // Posiciona el texto sobre la imagen
+            color: white; // Texto en blanco
+            text-align: center; // Centra el texto
+            opacity: 1; // Muestra el texto siempre
+            transition: opacity 0.5s ease; // Transición suave para la opacidad
+        }
+
+        &:hover {
+            .imagen-hover {
+                opacity: 1; // Muestra la imagen al pasar el mouse
+                background-color: transparent; // Elimina el fondo negro
+            }
+
+            // El texto ya está visible, no es necesario cambiar su opacidad
+        }
+    }
+}
+
 .colecciones-general {
     display: flex;
     justify-content: center;
