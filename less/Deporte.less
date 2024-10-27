@@ -2,6 +2,50 @@
 @deporte-primary-color: #000;
 @deporte-accent-color: #d70024;
 
+
+// portada-Principal
+@portada-image: "/img";
+.portada-Principal {
+    display: flex;
+    align-items: center; 
+    gap: 20px; 
+    padding: 70px; 
+    position: relative; 
+
+    // Estilo de la imagen como fondo
+    background-image: url("@{portada-image}/portada.avif");
+    background-size: cover; 
+    background-position: center; 
+    width: 100%; 
+    min-height: 300px; 
+
+    .text-container {
+        position: relative; 
+        z-index: 1; 
+
+        h2 {
+            font-size: 45px; 
+            font-weight: bold; 
+            color: #ffffff; 
+            margin: 0; 
+        }
+
+        h4 {
+            font-size: 35px; 
+            color: #ffffff; 
+            margin-top: 5px; 
+        }
+    }
+}
+
+
+
+//Productos Catalogo
+@image-path: "/img/Deporte/";
+@deporte-primary-color: #02101a;
+@deporte-accent-color: #ff0000;
+@deporte-font: Arial, sans-serif;
+
 .container-deporte-shop {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -18,74 +62,99 @@
 }
 
 .deporte-item-shop {
+  overflow: hidden; 
   border-radius: 10px;
+  transition: box-shadow 0.3s;
 
   &:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
   }
+
   a {
     text-decoration: none;
-}
+  }
 
   .figura-deporte-shop {
     overflow: hidden;
-  }
-
-  .imagen-deporte-shop {
     width: 100%;
     height: 300px;
-    object-fit: cover;
+    background-size: cover;
+    background-position: center;
     border-radius: 10px 10px 0 0;
-    transition: all 0.5s;
+    transition: transform 0.5s;
 
     &:hover {
-      transform: scale(1.2);
+      transform: scale(1.1);
     }
   }
-}
 
+  &.item-1 .figura-deporte-shop {
+    background-image: url("@{image-path}Zapatilla-1.jpg");
+  }
 
-.info-producto-shop {
-  padding: 15px 30px;
-  line-height: 2;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  &.item-2 .figura-deporte-shop {
+    background-image: url("@{image-path}Zapatilla-2.jpg");
+  }
 
-  .titulo-deporte-shop,
-  .marca-deporte-shop,
-  .color-deporte-shop {
+  &.item-3 .figura-deporte-shop {
+    background-image: url("@{image-path}Zapatilla-3.jpg");
+  }
+
+  &.item-4 .figura-deporte-shop {
+    background-image: url("@{image-path}Zapatilla-4.jpg");
+  }
+
+  &.item-5 .figura-deporte-shop {
+    background-image: url("@{image-path}Zapatilla 5.avif");
+  }
+
+  .info-producto-shop {
+    padding: 15px 30px;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .titulo-deporte-shop,
+    .marca-deporte-shop,
+    .color-deporte-shop {
+      font-weight: bold;
+      color: @deporte-primary-color;
+      font-family: @deporte-font;
+    }
+
+    .titulo-deporte-shop {
+      font-size: 25px;
+    }
+
+    .marca-deporte-shop {
+      font-size: 18px;
+    }
+
+    .color-deporte-shop {
+      font-size: 16px;
+    }
+  }
+
+  .precio-deporte-shop {
     font-weight: bold;
-    color: @deporte-primary-color;
+    font-size: 0.88em;
     font-family: @deporte-font;
+    color: @deporte-accent-color;
   }
 
-  .titulo-deporte-shop {
-    font-size: 25px;
+  .boton-compra-deporte {
+    border: none;
+    background-color: @deporte-primary-color;
+    color: #fff;
+    padding: 15px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: darken(@deporte-primary-color, 10%);
+    }
   }
-
-  .marca-deporte-shop {
-    font-size: 18px;
-  }
-
-  .color-deporte-shop {
-    font-size: 16px;
-  }
-}
-
-.precio-deporte-shop {
-  font-weight: bold;
-  font-size: 0.88em;
-  font-family: @deporte-font;
-  color: @deporte-accent-color;
-}
-
-.boton-compra-deporte {
-  border: none;
-  background-color: @deporte-primary-color;
-  color: #fff;
-  padding: 15px 10px;
-  cursor: pointer;
 }
 
 .carrito-vacio-deporte {
@@ -97,44 +166,80 @@
   display: none;
 }
 
+
+
+
 //Animacion de Modelos
+// Variables
+@images: "/img/Deporte"; // Ruta base de las imágenes
+
 .galeriapromo {
   display: flex;
   height: 30rem;
   gap: 1rem;
 
   section {
-      flex: 1;
-      border-radius: 1rem;
-      overflow: hidden;
-      transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
+    flex: 1;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative; 
 
-      img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-      }
+    // Estilo para las imágenes de fondo
+    &.promo1 {
+      background-image: url("@{images}/P1.avif");
+    }
+    &.promo2 {
+      background-image: url("@{images}/P2.avif");
+    }
+    &.promo3 {
+      background-image: url("@{images}/P3.avif");
+    }
+    &.promo4 {
+      background-image: url("@{images}/P4.avif");
+    }
+    &.promo5 {
+      background-image: url("@{images}/P5.avif");
+    }
+    &.promo6 {
+      background-image: url("@{images}/P6.avif");
+    }
+    &.promo7 {
+      background-image: url("@{images}/P7.avif");
+    }
 
+    // Estilo del enlace
+    a {
+      display: block; 
+      height: 100%; 
+      width: 100%; 
+      position: absolute; 
+      top: 0;
+      left: 0;
+      text-indent: -9999px; 
+      background: rgba(255, 255, 255, 0); 
+
+      // Opción para hover
       &:hover {
-          flex: 5;
+        background: rgba(255, 255, 255, 0.3);
       }
+    }
+
+    &:hover {
+      flex: 5;
+    }
   }
-  
-  // Imágenes
-  //.promo1 { background-image: url('../img/Deporte/P1.avif'); }
-  //.promo2 { background-image: url('../img/Deporte/P2.avif'); }
-  //.promo3 { background-image: url('../img/Deporte/P3.avif'); }
-  //.promo4 { background-image: url('../img/Deporte/P4.avif'); }
-  //.promo5 { background-image: url('../img/Deporte/P5.avif'); }
-  //.promo6 { background-image: url('../img/Deporte/P6.avif'); }
-  //.promo7 { background-image: url('../img/Deporte/P7.avif'); }
 }
+
 
 /* Variables */
 @card-gap: 10px;
 @card-padding: 10px;
+@images: "/img/Deporte"; // Ruta base de las imágenes
 
-/* Contenedor de los cards */
 .card-container {
     display: flex;
     flex-wrap: wrap; 
@@ -150,13 +255,24 @@
         overflow: hidden;
         border: 4px solid #fff;
         transition: all 0.3s ease-in-out;
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat; 
+        height: 300px; 
+        width: 100%;
 
-        /* Imagen del card */
-        .card-img {
-            display: block;
-            width: 100%;
-            height: auto; 
-            object-fit: cover;
+        /* Estilos de fondo para cada card */
+        &.promo1 {
+            background-image: url("@{images}/Promo1.jpg");
+        }
+        &.promo2 {
+            background-image: url("@{images}/Promo2.jpg");
+        }
+        &.promo3 {
+            background-image: url("@{images}/Promo3.jpg");
+        }
+        &.promo4 {
+            background-image: url("@{images}/Promo4.jpg");
         }
 
         /* Cuerpo del card */

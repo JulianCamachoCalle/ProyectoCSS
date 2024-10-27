@@ -186,6 +186,7 @@ nav {
 
 
 
+
 /* -----FOOTER----- */
 @footer-bg-color: black;
 @footer-text-color: white;
@@ -199,7 +200,7 @@ nav {
 @footer-border-radius: .9em;
 @footer-transition-time: 0.5s;
 @footer-line-height: 23px;
-
+@img-icon: "/img"; // Ruta base para las imágenes de iconos
 
 .box-footer-general {
     height: auto;
@@ -258,18 +259,25 @@ nav {
     display: flex;
 }
 
-.social-networks a {
-    font-size: 1.5rem;
-    color: @footer-gray-color;
-    transition: @footer-transition-time;
-}
+.social-networks {
+    .social-icon {
+        display: inline-block;
+        width: 2em;  // Ajusta el tamaño del ícono
+        height: 2em;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-right: 1.5rem; // Espaciado entre iconos
 
-.social-networks a:hover {
-    color: @footer-text-color;
-}
-
-.social-networks a:not(:last-of-type) {
-    margin-right: 1.5rem;
+        &.facebook-icon {
+            background-image: url('@{img-icon}/facebook.png'); // Ruta de la imagen de Facebook
+        }
+        &.whatsapp-icon {
+            background-image: url('@{img-icon}/whatsapp.png'); // Ruta de la imagen de WhatsApp
+        }
+        &.instagram-icon {
+            background-image: url('@{img-icon}/instragram.png'); // Ruta de la imagen de Instagram
+        }
+    }
 }
 
 /* Estilo para los enlaces */
@@ -284,7 +292,6 @@ nav {
 
 /* Media queries */
 @media screen and (max-width: 680px) {
-
     .footer-acerca-ayuda,
     .footer-redes {
         flex-direction: column;
