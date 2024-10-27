@@ -11,6 +11,7 @@ body {
 @hover-color: #a97736;
 @border-busqueda: #444;
 @transparent: transparent;
+@img-logo: "/img/logo-puma.jpg";
 
 header {
     background-color: @bg-dorado;
@@ -38,11 +39,12 @@ nav {
     padding: 4px 0;
 
     .logo {
-        img {
-            height: 49px;
-            width: 59px;
-            padding: 10px 10px;
-        }
+        background-image: url("@{img-logo}");
+        background-size: cover;
+        background-position: center;
+        min-width: 59px;
+        min-height: 49px;
+        padding: 10px 10px;
     }
 
     ul {
@@ -61,7 +63,7 @@ nav {
                 text-decoration: none;
                 font-size: 17px;
                 padding: 10px 20px;
-                transition:  font-size 0.3s ease, background-color 0.3s ease;
+                transition: font-size 0.3s ease, background-color 0.3s ease;
                 font-weight: 600;
 
                 &:hover {
@@ -262,7 +264,7 @@ nav {
 .social-networks {
     .social-icon {
         display: inline-block;
-        width: 2em;  // Ajusta el tamaño del ícono
+        width: 2em; // Ajusta el tamaño del ícono
         height: 2em;
         background-size: contain;
         background-repeat: no-repeat;
@@ -271,9 +273,11 @@ nav {
         &.facebook-icon {
             background-image: url('@{img-icon}/facebook.png'); // Ruta de la imagen de Facebook
         }
+
         &.whatsapp-icon {
             background-image: url('@{img-icon}/whatsapp.png'); // Ruta de la imagen de WhatsApp
         }
+
         &.instagram-icon {
             background-image: url('@{img-icon}/instragram.png'); // Ruta de la imagen de Instagram
         }
@@ -292,6 +296,7 @@ nav {
 
 /* Media queries */
 @media screen and (max-width: 680px) {
+
     .footer-acerca-ayuda,
     .footer-redes {
         flex-direction: column;
