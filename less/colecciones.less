@@ -51,6 +51,52 @@
     }
 }
 
+.colecciones-imagenes {
+    background-color: white; // Fondo blanco
+    color: black; // Texto en negro
+    padding: 20px; // Espaciado interno
+    display: flex; // Usar Flexbox para alinear las imágenes en fila
+    justify-content: space-around; // Espacio entre las secciones
+    flex-wrap: wrap; // Permitir que las secciones se ajusten en caso de que haya más de tres
+
+    .imagen-seccion {
+        position: relative; // Posiciona cada sección de imagen
+        margin: 20px; // Espaciado entre secciones
+        flex: 1 1 30%; // Permite que cada sección ocupe un 30% del ancho del contenedor
+        display: flex; // Activar Flexbox en la sección de imagen
+        justify-content: center; // Centrar horizontalmente
+        align-items: center; // Centrar verticalmente
+        background-color: black; // Fondo negro por defecto
+        border-radius: 35px;  // Ajusta el valor según el nivel de redondez que desees
+
+        .imagen-hover {
+            display: block; // Asegura que la imagen ocupe su propio espacio
+            width: 100%; // Asegura que la imagen ocupe todo el contenedor
+            height: auto; // Mantiene la proporción de la imagen
+            transition: opacity 0.5s ease; // Transición suave para la opacidad
+            opacity: 0; // Oculta la imagen por defecto
+            border-radius: 35px;  // Ajusta el valor según el nivel de redondez que desees
+        }
+
+        h3 {
+            position: absolute; // Posiciona el texto sobre la imagen
+            color: white; // Texto en blanco
+            text-align: center; // Centra el texto
+            opacity: 1; // Muestra el texto siempre
+            transition: opacity 0.5s ease; // Transición suave para la opacidad
+        }
+
+        &:hover {
+            .imagen-hover {
+                opacity: 1; // Muestra la imagen al pasar el mouse
+                background-color: transparent; // Elimina el fondo negro
+            }
+
+            // El texto ya está visible, no es necesario cambiar su opacidad
+        }
+    }
+}
+
 .colecciones-general {
     display: flex;
     justify-content: center;
@@ -158,30 +204,86 @@
     }
 }
 
-.puma-logo-section {
-    img {
-        width: 150px;
-        position: relative;
-        left: 0;
-        transition: transform 1s ease;
-    }
+//ANIMACION PRODUCTOS
 
-    img:hover {
-        animation: slideOutToLeftAndInFromRight 2s ease;
+.sliding-text {
+    position: relative;
+    animation: slide 3.5s infinite alternate;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(40%);
+    }
+    100% {
+      transform: translateX(-40%);
+    }
+  }
+
+.colecciones-products {
+    overflow: hidden; /* Asegura que no se muestren elementos fuera de la sección */
+}
+
+.producto {
+    opacity: 0; /* Inicia oculto */
+    transform: translateX(-20px); /* Inicia desplazado hacia la izquierda */
+    animation: slideIn 0.5s forwards; /* Aplica la animación */
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1; /* Finaliza visible */
+        transform: translateX(0); /* Vuelve a la posición original */
     }
 }
 
-@keyframes slideOutToLeftAndInFromRight {
-    0% {
-        transform: translateX(0);  // Posición inicial
+/* Agrega una animación de deslizamiento al hacer scroll */
+@media (prefers-reduced-motion: no-preference) {
+    .producto {
+        animation: slideIn 2s forwards;
     }
-    50% {
-        transform: translateX(-100vw);  // Se desplaza completamente a la izquierda
+}
+
+//ANIMACION LOGO PUMA
+
+.puma-logo-section {
+    width: 150px;
+    height: 150px;
+    background-image: url('../img/logo-puma.jpg'); /* Ruta de la imagen */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+    transition: transform 0.3s ease; /* Transición suave */
+
+    &:hover {
+        transform: scale(1.2); /* Aumenta el tamaño al pasar el cursor */
     }
-    51% {
-        transform: translateX(100vw);  // Aparece desde la derecha
+}
+
+
+//ANIMACION FOOTER
+
+.box-footer-general {
+    overflow: hidden; /* Asegura que no se muestren elementos fuera de la sección */
+}
+
+.box-footer {
+    opacity: 0; /* Inicia oculto */
+    transform: translateY(20px); /* Inicia desplazado hacia abajo */
+    animation: slideUp 0.5s forwards; /* Aplica la animación */
+}
+
+@keyframes slideUp {
+    to {
+        opacity: 1; /* Finaliza visible */
+        transform: translateY(0); /* Vuelve a la posición original */
     }
-    100% {
-        transform: translateX(0);  // Vuelve a la posición original
+}
+
+/* Agrega una animación de deslizamiento al hacer scroll */
+@media (prefers-reduced-motion: no-preference) {
+    .box-footer {
+        animation: slideUp 0.5s forwards;
     }
 }
