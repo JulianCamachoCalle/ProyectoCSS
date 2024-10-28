@@ -11,6 +11,7 @@ body {
 @hover-color: #a97736;
 @border-busqueda: #444;
 @transparent: transparent;
+@img-logo: "/img/logo-puma.jpg";
 
 header {
     background-color: @bg-dorado;
@@ -38,11 +39,12 @@ nav {
     padding: 4px 0;
 
     .logo {
-        img {
-            height: 49px;
-            width: 59px;
-            padding: 10px 10px;
-        }
+        background-image: url("@{img-logo}");
+        background-size: cover;
+        background-position: center;
+        min-width: 59px;
+        min-height: 49px;
+        padding: 10px 10px;
     }
 
     ul {
@@ -61,7 +63,7 @@ nav {
                 text-decoration: none;
                 font-size: 17px;
                 padding: 10px 20px;
-                transition:  font-size 0.3s ease, background-color 0.3s ease;
+                transition: font-size 0.3s ease, background-color 0.3s ease;
                 font-weight: 600;
 
                 &:hover {
@@ -186,6 +188,7 @@ nav {
 
 
 
+
 /* -----FOOTER----- */
 @footer-bg-color: black;
 @footer-text-color: white;
@@ -199,7 +202,7 @@ nav {
 @footer-border-radius: .9em;
 @footer-transition-time: 0.5s;
 @footer-line-height: 23px;
-
+@img-icon: "/img"; // Ruta base para las imágenes de iconos
 
 .box-footer-general {
     height: auto;
@@ -258,18 +261,27 @@ nav {
     display: flex;
 }
 
-.social-networks a {
-    font-size: 1.5rem;
-    color: @footer-gray-color;
-    transition: @footer-transition-time;
-}
+.social-networks {
+    .social-icon {
+        display: inline-block;
+        width: 2em; // Ajusta el tamaño del ícono
+        height: 2em;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-right: 1.5rem; // Espaciado entre iconos
 
-.social-networks a:hover {
-    color: @footer-text-color;
-}
+        &.facebook-icon {
+            background-image: url('@{img-icon}/facebook.png'); // Ruta de la imagen de Facebook
+        }
 
-.social-networks a:not(:last-of-type) {
-    margin-right: 1.5rem;
+        &.whatsapp-icon {
+            background-image: url('@{img-icon}/whatsapp.png'); // Ruta de la imagen de WhatsApp
+        }
+
+        &.instagram-icon {
+            background-image: url('@{img-icon}/instragram.png'); // Ruta de la imagen de Instagram
+        }
+    }
 }
 
 /* Estilo para los enlaces */
