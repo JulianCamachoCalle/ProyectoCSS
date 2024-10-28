@@ -2,6 +2,15 @@
 @ninos-primary-color: #000;
 @ninos-accent-color: #d70024;
 
+.info-header-ninos-shop {
+
+  a {
+      text-decoration: none; // Elimina el subrayado
+      color: @ninos-primary-color; // Asegúrate de que el color se mantenga igual
+  }
+}
+
+
 .container-ninos-shop {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -20,25 +29,35 @@
 .ninos-item-shop {
   border-radius: 10px;
 
-  &:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
-  }
-
-  .figura-ninos-shop {
-    overflow: hidden;
-  }
-
-  .imagen-ninos-shop {
+  .ninos-imagen1 {
+    background-image: url("../img/ninos/ninos1.avif"); // Ajustada la ruta
+    background-size: cover;
+    background-position: center;
     width: 100%;
     height: 300px;
-    object-fit: cover;
     border-radius: 10px 10px 0 0;
     transition: all 0.5s;
 
     &:hover {
-      transform: scale(1.2);
+        background-image: url("../img/ninos/cambio1-2.avif"); // Ajustada la ruta
+        transform: scale(1.2);
     }
-  }
+}
+
+.ninos-imagen2 {
+    background-image: url("../img/ninos/ninos2.avif"); // Ajustada la ruta
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 300px;
+    border-radius: 10px 10px 0 0;
+    transition: all 0.5s;
+
+    &:hover {
+        background-image: url("../img/ninos/cambio2.avif"); // Ajustada la ruta
+        transform: scale(1.2);
+    }
+}
 }
 
 .info-producto-shop {
