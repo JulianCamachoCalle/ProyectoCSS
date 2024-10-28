@@ -247,17 +247,20 @@
 //ANIMACION LOGO PUMA
 
 .puma-logo-section {
-    img {
-        width: 150px; /* Tamaño inicial */
-        position: relative;
-        left: 0;
-        transition: transform 0.3s ease; /* Transición suave */
-    }
+    width: 150px;
+    height: 150px;
+    background-image: url('../img/logo-puma.jpg'); /* Ruta de la imagen */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+    transition: transform 0.3s ease; /* Transición suave */
 
-    img:hover {
+    &:hover {
         transform: scale(1.2); /* Aumenta el tamaño al pasar el cursor */
     }
 }
+
 
 //ANIMACION FOOTER
 
