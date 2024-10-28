@@ -30,3 +30,13 @@ imagenes.forEach((imagen) => {
         imagen.src = originalSrc;
     });
 });
+
+// Selecciona todas las imágenes que pueden agrandarse
+const zoomableImages = document.querySelectorAll('.figura-ninos-shop');
+
+zoomableImages.forEach((image) => {
+  image.addEventListener('click', () => {
+    // Alterna la clase 'agrandada' al hacer clic
+    image.classList.toggle('agrandada');
+  });
+});
