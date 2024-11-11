@@ -13,292 +13,31 @@ body {
 @transparent: transparent;
 @img-logo: "/img/logo-puma.jpg";
 
-header {
+.bg-dorado {
     background-color: @bg-dorado;
-    text-align: center;
-
-    p {
-        margin: 0;
-        font-size: 14px;
-        color: @text-color;
-        padding: 13px;
-
-        a {
-            color: @text-color;
-            text-decoration: underline;
-        }
-    }
 }
 
 /* Navbar */
-nav {
-    background-color: @bg-negro;
-    display: flex;
-    justify-content: space-between;
+.logo {
+    background-image: url("@{img-logo}");
+    background-size: cover;
+    background-position: center;
+    min-width: 59px;
+    min-height: 49px;
+}
+
+.hover-nav {
+    transition: background-color 0.3s ease;
+}
+
+.hover-nav:hover {
+    background-color: @bg-dorado;
+}
+
+.form-control::placeholder {
+    color: white !important;
+    text-align: left;
     align-items: center;
-    padding: 4px 0;
-
-    .logo {
-        background-image: url("@{img-logo}");
-        background-size: cover;
-        background-position: center;
-        min-width: 59px;
-        min-height: 49px;
-        padding: 10px 10px;
-    }
-
-    ul {
-        list-style: none;
-        display: flex;
-        margin: 0;
-        padding: 0;
-        flex-grow: 1;
-        justify-content: center;
-
-        li {
-            margin: 10px 0;
-
-            a {
-                color: @text-color;
-                text-decoration: none;
-                font-size: 17px;
-                padding: 10px 20px;
-                transition: font-size 0.3s ease, background-color 0.3s ease;
-                font-weight: 600;
-
-                &:hover {
-                    background-color: @hover-color;
-                    font-size: 18px;
-                }
-            }
-        }
-    }
-
-    /* Búsqueda */
-    .search-form {
-        display: inherit;
-        margin: 20px 0;
-
-        input {
-            width: 100%;
-            padding: 12px 10px;
-            border: 1px solid @border-busqueda;
-            background-color: @transparent;
-            color: @text-color;
-            border-radius: 2px;
-        }
-
-        button {
-            background: none;
-            border: none;
-            cursor: pointer;
-            color: @text-color;
-
-            i {
-                font-size: 16px;
-            }
-        }
-    }
-
-    .menu-hamburguesa {
-        display: none;
-        font-size: 30px;
-        color: @text-color;
-        background: none;
-        border: none;
-        cursor: pointer;
-    }
-
-    .login {
-        display: flex;
-        align-items: center;
-        color: @text-color;
-        padding: 10px;
-    }
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
-
-        .logo {
-            margin-bottom: 10px;
-        }
-
-        ul {
-            flex-direction: column;
-            width: 100%;
-            display: none;
-        }
-
-        ul.activo {
-            display: flex;
-        }
-
-        li {
-            width: 100%;
-            text-align: left;
-            margin-bottom: 10px;
-
-            a {
-                padding: 10px;
-                display: block;
-            }
-        }
-
-        .search-form {
-            width: 100%;
-            max-width: none;
-
-            input {
-                padding: 10px 20px;
-                ;
-            }
-
-            button {
-                right: 8px;
-            }
-        }
-
-        .menu-hamburguesa {
-            display: block;
-        }
-    }
-}
-
-@media (max-width: 480px) {
-    p {
-        font-size: 12px;
-    }
-
-    ul li a {
-        font-size: 15px;
-    }
-
-    .search-form input {
-        padding: 10px 20px;
-    }
-
-    .search-form button i {
-        font-size: 14px;
-    }
-}
-
-
-
-
-/* -----FOOTER----- */
-@footer-bg-color: black;
-@footer-text-color: white;
-@footer-gray-color: gray;
-@footer-font-size: 0.75em;
-@footer-padding: 20px 0;
-@footer-btn-bg-color: #fff;
-@footer-btn-hover-bg: gray;
-@footer-btn-text-color: black;
-@footer-btn-hover-text-color: white;
-@footer-border-radius: .9em;
-@footer-transition-time: 0.5s;
-@footer-line-height: 23px;
-@img-icon: "/img"; // Ruta base para las imágenes de iconos
-
-.box-footer-general {
-    height: auto;
-    box-sizing: border-box;
-    background-color: @footer-bg-color;
-    color: @footer-text-color;
-    font-size: @footer-font-size;
-    justify-content: space-around;
-    margin-top: auto;
-    padding: @footer-padding;
-}
-
-.box-footer {
-    width: 70%;
-    height: auto;
-    margin: auto;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-}
-
-.box-footer-2 {
-    width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-top: 1px solid @footer-gray-color;
-    border-bottom: 1px solid @footer-gray-color;
-    padding-top: 2em;
-    padding-bottom: 2em;
-    line-height: @footer-line-height;
-}
-
-/* Sección "Acerca de" y "Ayuda" */
-.footer-acerca-ayuda {
-    height: auto;
-    box-sizing: border-box;
-    display: flex;
-}
-
-.footer-acerca,
-.horario-atencion {
-    margin-bottom: 2em;
-    width: 50%;
-}
-
-.footer-ayuda {
-    margin-bottom: 2em;
-}
-
-/* Redes sociales */
-.footer-redes {
-    height: auto;
-    box-sizing: border-box;
-    display: flex;
-}
-
-.social-networks {
-    .social-icon {
-        display: inline-block;
-        width: 2em; // Ajusta el tamaño del ícono
-        height: 2em;
-        background-size: contain;
-        background-repeat: no-repeat;
-        margin-right: 1.5rem; // Espaciado entre iconos
-
-        &.facebook-icon {
-            background-image: url('@{img-icon}/facebook.png'); // Ruta de la imagen de Facebook
-        }
-
-        &.whatsapp-icon {
-            background-image: url('@{img-icon}/whatsapp.png'); // Ruta de la imagen de WhatsApp
-        }
-
-        &.instagram-icon {
-            background-image: url('@{img-icon}/instragram.png'); // Ruta de la imagen de Instagram
-        }
-    }
-}
-
-/* Estilo para los enlaces */
-.anchor-footer {
-    color: @footer-gray-color;
-    transition: @footer-transition-time;
-}
-
-.anchor-footer:hover:not(.horario) {
-    color: @footer-text-color;
-}
-
-/* Media queries */
-@media screen and (max-width: 680px) {
-
-    .footer-acerca-ayuda,
-    .footer-redes {
-        flex-direction: column;
-    }
+    font-size: 0.9rem;
+    font-weight: 400;
 }

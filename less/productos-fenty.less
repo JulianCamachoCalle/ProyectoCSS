@@ -1,7 +1,7 @@
 @import "headerandfooter.less";
 
 // Variables
-@bg-gray-light: #fcfbfb;
+@bg-gray-light: #ffffff;
 @bg-negro: #000000;
 @bg-gray: #a5a5a5;
 @bg-gray-dark: #767676;
@@ -20,59 +20,11 @@
 @img-fenty-negro: "/img/Zapatillas-Creeper-Phatty-Corduroy-negro.png";
 @img-fenty-rojo: "/img/Zapatillas-Creeper-Phatty-Corduroy-red.png";
 
-// Estilos para el producto
-.seccion-1 {
-    @media (min-width: 768px) {
-        min-width: 60%;
-    }
-}
-
-.seccion-2 {
-    @media (min-width: 768px) {
-        min-width: 40%;
-    }
-}
-
-.producto-rojo, .producto-negro {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 5px;
-    background-color: @bg-gray-light;
-
-    @media (max-width: 768px) {
-        flex-direction: column;
-    }
-
-    .producto-imagen {
-        margin: 10px 0;
-        background-size: cover;
-        background-position: center;
-        min-height: 500px;
-        min-width: 500px;
-        margin: 0;
-    }
-
-    .producto-detalles {
-        width: 100%;
-        margin: 10px 0;
-
-        h2 {
-            font-size: @text-size-high;
-        }
-
-        .nuevo {
-            background-color: @bg-negro;
-            color: @text-color;
-            font-size: @text-size-light;
-            padding: 7px 12px;
-        }
-
-        .precio {
-            font-size: @text-size-medium;
-            font-weight: 600;
-        }
-    }
+.producto-imagen {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 600px;
 }
 
 .producto-rojo .producto-imagen {
@@ -83,102 +35,29 @@
     background-image: url("@{img-fenty-negro}");
 }
 
-.color-selector {
-    border-bottom: 1px solid @bg-gray;
-
-    p {
-        font-size: @text-size-small;
-        font-weight: 600;
-    }
-
-    .colores {
-        background-color: @bg-gray-light;
-        display: flex;
-        justify-content: left;
-
-        @media (min-width: 768px) {
-            justify-content: row;
-        }
-
-        .color-activo {
-            border: 1px solid @bg-gray;
-        }
-    }
-}
-
-.promocion {
-    padding: 20px 0;
-    border-bottom: 1px solid @bg-gray;
-
-    .descuento {
-        background-color: @bg-negro;
-        max-width: fit-content;
-        padding: 7px 12px;
-        color: @text-color;
-        font-size: @text-size-light;
-    }
-
-    p {
-        font-size: @text-size-small;
-        font-weight: 500;
-        margin: 5px 0;
-        max-width: 350px;
-    }
+.color-activo {
+    border: 1px solid @bg-gray;
 }
 
 .talla-selector {
-    padding: 20px 0;
-    border-bottom: 1px solid @bg-gray;
+    button {
+        width: 80px;
+        height: 80px;
+        transition: background-color 0.3s ease, transform 0.3s ease, border 0.3s ease;
 
-    p {
-        font-size: @text-size-small;
-        font-weight: 600;
-        margin: 5px 0;
-    }
-
-    nav {
-        display: flex;
-
-        @media (min-width: 768px) {
-            justify-content: start;
+        &:hover {
+            box-shadow: @hover-shadow;
+            border: 1px solid @bg-negro;
+            transform: scale(1.05);
         }
-    }
 
-    .tallas {
-        margin: 20px 0;
-        padding: 0;
-        background-color: @bg-gray-light;
-
-        button {
-            background-color: @bg-gray-light;
-            border: 1px solid @bg-gray;
-            width: 80px;
-            height: 80px;
-            margin: 0 3px;
-            transition: background-color 0.3s ease, transform 0.3s ease, border 0.3s ease;
-
-            &:hover {
-                box-shadow: @hover-shadow;
-                border: 1px solid @bg-negro;
-                transform: scale(1.05);
-            }
-        }
     }
 }
 
 .carrito-agregar {
-    padding: 20px 0;
-    border-bottom: 1px solid @bg-gray;
-    display: flex;
-    justify-content: center;
-
     button {
         background-color: @bg-dorado;
         color: @bg-gray-light;
-        border: none;
-        border-radius: 3px;
-        font-size: @text-size-small;
-        padding: 20px 150px;
         transition: background-color 0.3s ease, transform 0.3s ease, border 0.3s ease;
 
         &:hover {
@@ -186,17 +65,12 @@
             box-shadow: @hover-shadow;
             border: 1px solid @bg-gray;
             transform: scale(1.05);
+            color: @bg-gray-light;
         }
     }
 }
 
 .descripcion-producto {
-    padding: 20px 0;
-
-    h2 {
-        font-size: @text-size-medium;
-    }
-
     p {
         max-width: 600px;
         line-height: 2;
@@ -206,7 +80,7 @@
 
 .seleccionado {
     background-color: @bg-negro !important;
-    color: @bg-gray-light;
+    color: @bg-gray-light !important;
 }
 
 .fenty-rojo {
